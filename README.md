@@ -18,7 +18,7 @@ IncidentAgent is a console application that acts as a security advisor, analyzin
 
 - [Ollama](https://ollama.com/) server running locally on `http://localhost:11434/`
 - llama3.2:3b model installed in Ollama
-- .NET runtime environment
+- .NET 8 SDK (includes the runtime)
 - An `incident.json` file containing security alert data (placed in parent directory)
 
 ## Setup
@@ -29,9 +29,23 @@ IncidentAgent is a console application that acts as a security advisor, analyzin
    ollama pull llama3.2:3b
    ```
 3. Create an `incident.json` file with your security alert data
-4. Run the IncidentAgent application
+4. Build the project:
+   ```bash
+   dotnet build
+   ```
+5. Run the IncidentAgent application:
+   ```bash
+   dotnet run
+   ```
 
 ## Usage
+
+Run the following commands from the project directory:
+
+```bash
+dotnet build
+dotnet run
+```
 
 The application will:
 1. Initialize connection to the Ollama server
