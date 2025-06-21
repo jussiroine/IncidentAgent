@@ -1,0 +1,7 @@
+{
+  "alertId": "EX-001",
+  "alertType": "UnauthorizedAccess",
+  "severity": "High",
+  "description": "Multiple failed login attempts detected for admin account",
+  "timestamp": "2024-05-21T10:15:00Z"
+}
