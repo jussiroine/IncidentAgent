@@ -19,10 +19,7 @@ var modelId = "llama3.2:3b";
 Console.ForegroundColor = ConsoleColor.White;
 Console.Write("Initiating..");
 
-IChatClient client = new OllamaChatClient(endpoint, modelId: modelId)
-    .AsBuilder()
-    .UseFunctionInvocation()
-    .Build();
+IChatClient client = new OllamaChatClient(endpoint, modelId: modelId);
 
 Console.ForegroundColor = ConsoleColor.Green;
 Console.Write(" [OK]\n");
@@ -37,9 +34,15 @@ messages.Add(sysMessage);
 string filePath = @"..\incident.json";
 string fileContent = await File.ReadAllTextAsync(filePath);
 
-var response = await client.CompleteAsync(messages + "I have the following security alert: " + fileContent + " Give me security recommendation based on the alert. Do not use markdown for formatting. Highlight ONE critical action in the beginning.", chatOptions);
+var userMessage = new ChatMessage(
+    ChatRole.User,
+    $"I have the following security alert: {fileContent} Give me security recommendation based on the alert. Do not use markdown for formatting. Highlight ONE critical action in the beginning.");
+
+messages.Add(userMessage);
+
+var response = await client.GetResponseAsync(messages, chatOptions);
 Console.ForegroundColor = ConsoleColor.White;
-Console.WriteLine(response.Message);
+Console.WriteLine(response.Text);
 
 
 
