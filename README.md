@@ -19,7 +19,7 @@ IncidentAgent is a console application that acts as a security advisor, analyzin
 - [Ollama](https://ollama.com/) server running locally on `http://localhost:11434/`
 - llama3.2:3b model installed in Ollama
 - .NET runtime environment
-- An `incident.json` file containing security alert data (placed in parent directory)
+- An `incident.json` file containing security alert data (placed in parent directory). A minimal example is included in the repository root.
 
 ## Setup
 
@@ -55,3 +55,17 @@ The agent provides recommendations such as:
 - **Model**: `llama3.2:3b`
 - **Temperature**: 0.5 (balanced creativity/consistency)
 - **Tool Mode**: Auto (automatic function invocation)
+
+## Example `incident.json`
+
+The repository includes a minimal `incident.json` demonstrating common fields:
+
+```json
+{
+  "alertId": "EX-001",
+  "alertType": "UnauthorizedAccess",
+  "severity": "High",
+  "description": "Multiple failed login attempts detected for admin account",
+  "timestamp": "2024-05-21T10:15:00Z"
+}
+```
