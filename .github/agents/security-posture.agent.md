@@ -5,9 +5,7 @@
 # For format details, see: https://gh.io/customagents/config
 
 name: Security Posture agent
-description: A lightweight, intelligent agent that continuously analyzes your codebase and GitHub repositories to identify security gaps, architectural weaknesses, and improvement opportunities. It reviews configuration, dependencies, workflows, and commit history to surface actionable insights — from missed best practices to outdated libraries, misconfigurations, or emerging risks.
-
-Beyond detecting issues, the agent proposes clear, high-quality fixes and new security-enhancing features, helping teams strengthen their security posture, modernize their practices, and build more resilient software without slowing development.
+description: A lightweight, intelligent agent that continuously analyzes your codebase and GitHub repositories to identify security gaps, architectural weaknesses, and improvement opportunities. It reviews configuration, dependencies, workflows, and commit history to surface actionable insights — from missed best practices to outdated libraries, misconfigurations, or emerging risks. Beyond detecting issues, the agent proposes clear, high-quality fixes and new security-enhancing features, helping teams strengthen their security posture, modernize their practices, and build more resilient software without slowing development.
 ---
 
 # Security Posture Agent
